@@ -1,0 +1,619 @@
+/* ===== СБРОС СТИЛЕЙ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: #f0f2f5;
+    color: #1a1a2e;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* ===== ШАПКА (Flexbox) ===== */
+.header {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    transition: opacity 0.2s;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+/* ===== МЕНЮ (Flexbox) ===== */
+.nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav__link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s ease;
+    font-size: 1rem;
+}
+
+.nav__link:hover {
+    color: #fff;
+    border-bottom-color: #e8a87c;
+}
+
+.nav__link.active {
+    color: #fff;
+    border-bottom-color: #e8a87c;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+.main {
+    padding: 50px 0;
+    min-height: calc(100vh - 180px);
+}
+
+.page-title {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+    font-weight: 700;
+    color: #1a1a2e;
+    border-left: 5px solid #e8a87c;
+    padding-left: 18px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a2e;
+}
+
+/* ===== ГЛАВНАЯ: СЕТКА КНИГ (Grid) ===== */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* ===== КАРТОЧКА КНИГИ (Flexbox внутри) ===== */
+.book-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e8ecf1;
+    transition: all 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    border-color: #d0d8e0;
+}
+
+.book-card--featured {
+    grid-column: span 2;
+    grid-row: span 1;
+    border-color: #e8a87c;
+    background: linear-gradient(135deg, #fff 0%, #fdf6f0 100%);
+}
+
+.book-card__cover {
+    height: 120px;
+    background: linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.book-card__cover-placeholder {
+    font-size: 3rem;
+    opacity: 0.6;
+}
+
+.book-card__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #e8a87c;
+    color: #1a1a2e;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 30px;
+}
+
+.book-card__info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.book-card__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.book-card__author {
+    font-size: 0.95rem;
+    color: #5a6a7a;
+}
+
+.book-card__year {
+    font-size: 0.85rem;
+    color: #8a9aa8;
+}
+
+.book-card__excerpt {
+    font-size: 0.9rem;
+    color: #2d3a45;
+    margin: 4px 0 8px 0;
+}
+
+.book-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.book-card__rating {
+    font-weight: 600;
+    color: #f0b34b;
+}
+
+.book-card__status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 30px;
+}
+
+.book-card__status--available {
+    background: #d4edda;
+    color: #155724;
+}
+
+.book-card__status--unavailable {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.book-card__link {
+    color: #1a1a2e;
+    font-weight: 600;
+    text-decoration: none;
+    align-self: flex-start;
+    border-bottom: 2px solid #e8a87c;
+    padding-bottom: 2px;
+    transition: all 0.2s;
+    margin-top: 4px;
+}
+
+.book-card__link:hover {
+    color: #b87a4e;
+    border-bottom-color: #b87a4e;
+}
+
+/* ===== СТРАНИЦА ЖАНРОВ (Grid) ===== */
+.genres-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* ===== КАРТОЧКА ЖАНРА (Flexbox внутри) ===== */
+.genre-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8ecf1;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.genre-card:hover {
+    background: #fdf6f0;
+    border-color: #e8a87c;
+    transform: scale(1.03);
+}
+
+.genre-card--large {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: linear-gradient(135deg, #fff 0%, #fdf6f0 100%);
+    border-color: #e8a87c;
+}
+
+.genre-card--wide {
+    grid-column: span 2;
+}
+
+.genre-card__icon {
+    font-size: 2.8rem;
+}
+
+.genre-card__title {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.genre-card__count {
+    color: #7a8a9a;
+    font-size: 0.9rem;
+}
+
+.genre-card__authors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.genre-card__authors span {
+    background: #f0f2f5;
+    padding: 2px 12px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    color: #4a5a6a;
+}
+
+/* ===== СТРАНИЦА "О БИБЛИОТЕКЕ" ===== */
+.about-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 35px;
+    margin-bottom: 50px;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.about-text {
+    background: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #e8ecf1;
+}
+
+.about-text p {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 12px;
+    border: 1px solid #e8ecf1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: all 0.2s;
+}
+
+.feature-item:hover {
+    border-color: #e8a87c;
+    background: #fdf6f0;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+}
+
+.feature-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-desc {
+    font-size: 0.8rem;
+    color: #7a8a9a;
+}
+
+.about-stats {
+    background: #1a1a2e;
+    color: #fff;
+    border-radius: 16px;
+    padding: 32px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-content: start;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 16px;
+}
+
+.stat-item:nth-child(3),
+.stat-item:nth-child(4) {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.stat-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #e8a87c;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+/* ===== БЛОК ПОПУЛЯРНЫХ КНИГ (Flexbox) ===== */
+.popular-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #e8ecf1;
+}
+
+.popular-books {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popular-book {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.popular-book:hover {
+    background: #fdf6f0;
+    transform: translateX(6px);
+}
+
+.popular-book__rank {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #e8a87c;
+    min-width: 30px;
+}
+
+.popular-book__title {
+    font-weight: 600;
+    flex: 1;
+}
+
+.popular-book__author {
+    color: #7a8a9a;
+    font-size: 0.9rem;
+}
+
+/* ===== ПОДВАЛ (Flexbox) ===== */
+.footer {
+    background: #1a1a2e;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 25px 0;
+    margin-top: 20px;
+    border-top: 1px solid #2a2a42;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+/* Планшеты */
+@media (max-width: 992px) {
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .book-card--featured {
+        grid-column: span 1;
+    }
+
+    .genres-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .genre-card--large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .genre-card--wide {
+        grid-column: span 1;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat-item {
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 0;
+        padding-right: 15px;
+    }
+
+    .stat-item:nth-child(4) {
+        border-right: none;
+        padding-right: 0;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 640px) {
+    .header__inner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .genres-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .genre-card--large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .genre-card--wide {
+        grid-column: span 1;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-right: 0;
+        padding-bottom: 12px;
+    }
+
+    .stat-item:nth-child(3) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .stat-item:nth-child(4) {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .page-title {
+        font-size: 1.6rem;
+    }
+
+    .popular-book {
+        flex-wrap: wrap;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 400px) {
+    .nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .genres-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 12px;
+    }
+
+    .stat-item:nth-child(4) {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .book-card__meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}

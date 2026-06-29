@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Книжный архив | Главная</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">📚 Книжный архив</a>
+            <nav class="nav">
+                <a href="index.html" class="nav__link active">Главная</a>
+                <a href="page2.html" class="nav__link">Жанры</a>
+                <a href="page3.html" class="nav__link">О библиотеке</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h2 class="page-title">Новые поступления</h2>
+
+            <div class="books-grid">
+                <!-- Книга 1 -->
+                <article class="book-card book-card--featured">
+                    <div class="book-card__cover">
+                        <span class="book-card__badge">Новинка</span>
+                        <div class="book-card__cover-placeholder">📖</div>
+                    </div>
+                    <div class="book-card__info">
+                        <h3 class="book-card__title">Мастер и Маргарита</h3>
+                        <p class="book-card__author">Михаил Булгаков</p>
+                        <p class="book-card__year">1966 г.</p>
+                        <p class="book-card__excerpt">Роман, в котором переплетаются сатира, философия и мистика.</p>
+                        <div class="book-card__meta">
+                            <span class="book-card__rating">⭐ 4.8</span>
+                            <span class="book-card__status book-card__status--available">В наличии</span>
+                        </div>
+                        <a href="#" class="book-card__link">Подробнее →</a>
+                    </div>
+                </article>
+
+                <!-- Книга 2 -->
+                <article class="book-card">
+                    <div class="book-card__cover">
+                        <div class="book-card__cover-placeholder">📕</div>
+                    </div>
+                    <div class="book-card__info">
+                        <h3 class="book-card__title">1984</h3>
+                        <p class="book-card__author">Джордж Оруэлл</p>
+                        <p class="book-card__year">1949 г.</p>
+                        <p class="book-card__excerpt">Антиутопия о тоталитарном обществе и слежке.</p>
+                        <div class="book-card__meta">
+                            <span class="book-card__rating">⭐ 4.7</span>
+                            <span class="book-card__status book-card__status--available">В наличии</span>
+                        </div>
+                        <a href="#" class="book-card__link">Подробнее →</a>
+                    </div>
+                </article>
+
+                <!-- Книга 3 -->
+                <article class="book-card">
+                    <div class="book-card__cover">
+                        <div class="book-card__cover-placeholder">📗</div>
+                    </div>
+                    <div class="book-card__info">
+                        <h3 class="book-card__title">Война и мир</h3>
+                        <p class="book-card__author">Лев Толстой</p>
+                        <p class="book-card__year">1869 г.</p>
+                        <p class="book-card__excerpt">Эпопея о судьбах людей во время наполеоновских войн.</p>
+                        <div class="book-card__meta">
+                            <span class="book-card__rating">⭐ 4.9</span>
+                            <span class="book-card__status book-card__status--unavailable">Нет в наличии</span>
+                        </div>
+                        <a href="#" class="book-card__link">Подробнее →</a>
+                    </div>
+                </article>
+
+                <!-- Книга 4 -->
+                <article class="book-card">
+                    <div class="book-card__cover">
+                        <div class="book-card__cover-placeholder">📘</div>
+                    </div>
+                    <div class="book-card__info">
+                        <h3 class="book-card__title">Преступление и наказание</h3>
+                        <p class="book-card__author">Фёдор Достоевский</p>
+                        <p class="book-card__year">1866 г.</p>
+                        <p class="book-card__excerpt">Философский роман о морали, вине и искуплении.</p>
+                        <div class="book-card__meta">
+                            <span class="book-card__rating">⭐ 4.8</span>
+                            <span class="book-card__status book-card__status--available">В наличии</span>
+                        </div>
+                        <a href="#" class="book-card__link">Подробнее →</a>
+                    </div>
+                </article>
+
+                <!-- Книга 5 -->
+                <article class="book-card">
+                    <div class="book-card__cover">
+                        <div class="book-card__cover-placeholder">📙</div>
+                    </div>
+                    <div class="book-card__info">
+                        <h3 class="book-card__title">Анна Каренина</h3>
+                        <p class="book-card__author">Лев Толстой</p>
+                        <p class="book-card__year">1877 г.</p>
+                        <p class="book-card__excerpt">Трагическая история любви и общественных норм.</p>
+                        <div class="book-card__meta">
+                            <span class="book-card__rating">⭐ 4.7</span>
+                            <span class="book-card__status book-card__status--available">В наличии</span>
+                        </div>
+                        <a href="#" class="book-card__link">Подробнее →</a>
+                    </div>
+                </article>
+
+                <!-- Книга 6 -->
+                <article class="book-card">
+                    <div class="book-card__cover">
+                        <div class="book-card__cover-placeholder">📓</div>
+                    </div>
+                    <div class="book-card__info">
+                        <h3 class="book-card__title">Сто лет одиночества</h3>
+                        <p class="book-card__author">Габриэль Маркес</p>
+                        <p class="book-card__year">1967 г.</p>
+                        <p class="book-card__excerpt">Магический реализм и история семьи Буэндиа.</p>
+                        <div class="book-card__meta">
+                            <span class="book-card__rating">⭐ 4.6</span>
+                            <span class="book-card__status book-card__status--unavailable">Нет в наличии</span>
+                        </div>
+                        <a href="#" class="book-card__link">Подробнее →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <span>© 2026 Книжный архив. Все права защищены.</span>
+            <span>Сделано с ❤️ и (Flexbox + Grid)</span>
+        </div>
+    </footer>
+
+</body>
+</html>
